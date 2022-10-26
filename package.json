@@ -4,8 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "build": "webpack --mode=production"
+    "start": "npx webpack --config webpack.config.js",
+    "build": "npx webpack --mode=production"
   },
   "devDependencies": {
     "webpack": "^4.20.2",

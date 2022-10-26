@@ -1,5 +1,5 @@
 const greet = () => {
-  console.log('hello')
+  console.log('index')
 }
 
 greet()
