@@ -1,0 +1,25 @@
+{
+  "name": "learn_webpack4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wx1989/learn_webpack4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wx1989/learn_webpack4/issues"
+  },
+  "homepage": "https://github.com/wx1989/learn_webpack4#readme"
+}
