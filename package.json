@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/wx1989/learn_webpack4/issues"
   },
-  "homepage": "https://github.com/wx1989/learn_webpack4#readme"
+  "homepage": "https://github.com/wx1989/learn_webpack4#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
 }

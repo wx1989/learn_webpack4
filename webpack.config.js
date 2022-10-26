@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    hello: './src/hello.js'
+    hello: ["@babel/polyfill", './src/hello.js']
   },
   devtool: false,
   output: {
