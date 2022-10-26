@@ -18,11 +18,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            // presets: [
-            //   ['@babel/preset-env', { targets: "defaults" }]
-            // ]
+            presets: [
+              ['@babel/preset-env', { targets: "defaults", debug: true }]
+            ],
             // TODO: 和.bablerc效果一致
-            // plugins: ["@babel/plugin-transform-arrow-functions"]
+            plugins: ["@babel/plugin-transform-arrow-functions", ["@babel/plugin-proposal-decorators", { "legacy": true }]]
           }
         }
       }
