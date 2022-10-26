@@ -1,3 +1,4 @@
+import "@babel/polyfill"
 import person from './lib'
 
 console.log(person)
