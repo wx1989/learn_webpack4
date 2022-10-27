@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "npx webpack --config webpack.config.js",
+    "dev": "NODE_ENV=development npx webpack",
+    "prod": "NODE_ENV=production npx webpack",
     "build": "npx webpack --mode=production"
   },
   "devDependencies": {
@@ -14,7 +15,12 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "style-loader": "^0.23.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },

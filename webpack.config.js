@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   mode: 'development',
@@ -27,7 +29,20 @@ module.exports = {
             plugins: ["@babel/plugin-transform-arrow-functions", ["@babel/plugin-proposal-decorators", { "legacy": true }]]
           }
         }
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: [devMode ? "style-loader" : MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "less-loader",
+        ],
+      },
     ],
   },
   plugins: [
@@ -42,6 +57,10 @@ module.exports = {
       filename: 'hello.html',
       template: 'public/index.html',
       chunks: ['hello']
+    }),
+    new MiniCssExtractPlugin({
+      filename: devMode ? "[name].css" : "[name].[hash].css",
+      chunkfilename: devMode ? "[name].css" : "[id].[hash].css"
     })
   ]
 }
