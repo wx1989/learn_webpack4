@@ -5,7 +5,8 @@
         "debug": true,
         "useBuiltIns": "usage"
       }
-    ]
+    ],
+    ["@babel/preset-react"]
   ],
   "plugins": [
     "@babel/plugin-transform-arrow-functions"
