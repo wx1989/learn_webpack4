@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const Webpackbar = require('webpackbar')
 
 let pathsToClean = [
   'dist'
@@ -58,6 +59,7 @@ module.exports = {
       template: 'public/index.html',
       chunks: ['hello']
     }),
+    new Webpackbar(),
     new CleanWebpackPlugin(pathsToClean)
   ]
 }
