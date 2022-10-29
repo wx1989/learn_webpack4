@@ -6,7 +6,7 @@ import './index.less'
 const App = () => {
   return (
     <>
-      <p>React</p>
+      <p>React, Hello</p>
     </>
   )
 }

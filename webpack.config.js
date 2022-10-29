@@ -62,5 +62,10 @@ module.exports = {
       filename: devMode ? "[name].css" : "[name].[hash].css",
       chunkfilename: devMode ? "[name].css" : "[id].[hash].css"
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  },
 }
