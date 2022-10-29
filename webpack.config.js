@@ -17,7 +17,7 @@ module.exports = {
   devtool: false,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].bundle.js'
+    filename: 'js/[name].[hash].bundle.js'
   },
   module: {
     rules: [
@@ -48,6 +48,18 @@ module.exports = {
           "less-loader",
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -64,8 +76,8 @@ module.exports = {
       chunks: ['hello']
     }),
     new MiniCssExtractPlugin({
-      filename: devMode ? "[name].css" : "[name].[hash].css",
-      chunkfilename: devMode ? "[name].css" : "[id].[hash].css"
+      filename: devMode ? "css/[name].css" : "css/[name].[hash].css",
+      chunkfilename: devMode ? "css/[name].css" : "css/[id].[hash].css"
     }),
     new CleanWebpackPlugin(pathsToClean)
   ],
